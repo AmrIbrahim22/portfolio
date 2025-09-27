@@ -31,7 +31,6 @@
             overflow-x: hidden;
         }
 
-        /* Animated Background */
         .bg-animation {
             position: fixed;
             top: 0;
@@ -50,7 +49,6 @@
             100% { background-position: 0% 50%; }
         }
 
-        /* Header */
         header {
             position: fixed;
             top: 0;
@@ -113,7 +111,6 @@
             width: 100%;
         }
 
-        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -155,6 +152,7 @@
             gap: 1.5rem;
             justify-content: center;
             animation: fadeInUp 1s ease 0.6s both;
+            flex-wrap: wrap;
         }
 
         .btn {
@@ -193,7 +191,6 @@
             transform: translateY(-3px);
         }
 
-        /* Section Styling */
         .section {
             padding: 6rem 0;
             max-width: 1200px;
@@ -212,7 +209,6 @@
             background-clip: text;
         }
 
-        /* About Section */
         .about-content {
             text-align: center;
             font-size: 1.3rem;
@@ -226,7 +222,6 @@
             color: var(--primary);
         }
 
-        /* Skills Section */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -280,10 +275,9 @@
             transform: scale(1.05);
         }
 
-        /* Projects Section */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             gap: 3rem;
             margin-top: 4rem;
         }
@@ -349,6 +343,7 @@
         .project-links {
             display: flex;
             gap: 1.2rem;
+            flex-wrap: wrap;
         }
 
         .project-link {
@@ -371,7 +366,6 @@
             transform: translateY(-2px);
         }
 
-        /* Experience Section */
         .timeline {
             position: relative;
             margin-top: 4rem;
@@ -462,10 +456,9 @@
             font-size: 0.9rem;
         }
 
-        /* Certificates Section */
         .certificates-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2.5rem;
             margin-top: 4rem;
         }
@@ -504,7 +497,26 @@
             font-size: 0.95rem;
         }
 
-        /* Contact Section */
+        .education-card {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 2.5rem;
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.3s ease;
+            margin-top: 3rem;
+        }
+
+        .education-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .education-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -550,7 +562,6 @@
             color: var(--primary);
         }
 
-        /* Footer */
         footer {
             background: var(--darker);
             padding: 4rem 0;
@@ -581,7 +592,6 @@
             font-size: 1.1rem;
         }
 
-        /* Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -593,7 +603,6 @@
             }
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -644,7 +653,6 @@
             }
         }
 
-        /* Mobile Menu */
         .mobile-menu-btn {
             display: none;
             background: none;
@@ -659,13 +667,50 @@
                 display: block;
             }
         }
+
+        .languages-section {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 2.5rem;
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .languages-section h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .languages {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .language-item {
+            text-align: center;
+        }
+
+        .language-item span {
+            display: block;
+            color: var(--light);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .language-level {
+            color: var(--secondary);
+            font-size: 1rem;
+        }
     </style>
 </head>
 <body>
-    <!-- Background Animation -->
     <div class="bg-animation"></div>
 
-    <!-- Header -->
     <header>
         <nav>
             <div class="logo">Amr Ibrahim</div>
@@ -684,15 +729,16 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Amr Ibrahim</h1>
             <p class="subtitle">Senior Flutter Developer & Cross-Platform Expert</p>
             <p class="description">
                 Flutter Mobile Developer with 3+ years of experience in cross-platform app development 
-                for iOS and Android platforms. Specialized in performance optimization and user experience 
-                with a track record of reducing development cycles by 40% while maintaining 99.9% app stability.
+                for iOS and Android platforms. Demonstrated expertise in designing and delivering robust 
+                mobile applications using Flutter framework, with a focus on performance optimization and 
+                user experience. Track record of reducing development cycles by 40% while maintaining 
+                99.9% app stability.
             </p>
             <div class="cta-buttons">
                 <a href="#projects" class="btn btn-primary">
@@ -703,11 +749,14 @@
                     <i class="fas fa-envelope"></i>
                     Get In Touch
                 </a>
+                <a href="mailto:amrdevmob@gmail.com" class="btn btn-outline">
+                    <i class="fas fa-download"></i>
+                    Download CV
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="section">
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
@@ -716,13 +765,26 @@
                 <strong>World Of System and Software</strong> in Cairo, Egypt. With demonstrated expertise in 
                 designing and delivering robust mobile applications using Flutter framework, I focus on 
                 performance optimization and exceptional user experience. I have successfully served 
-                <strong>50,000+ users</strong> across multiple enterprise-scale applications, with a proven 
-                track record in technical leadership and cross-functional team collaboration.
+                <strong>50,000+ users</strong> across multiple enterprise-scale applications, with proven 
+                expertise in cross-functional team collaboration and technical leadership.
             </p>
+        </div>
+
+        <div class="languages-section">
+            <h3><i class="fas fa-globe"></i> Languages</h3>
+            <div class="languages">
+                <div class="language-item">
+                    <span>Arabic</span>
+                    <div class="language-level">Native</div>
+                </div>
+                <div class="language-item">
+                    <span>English</span>
+                    <div class="language-level">Advanced</div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills" class="section">
         <h2 class="section-title">Technical Skills</h2>
         <div class="skills-grid">
@@ -733,71 +795,69 @@
                     <span class="skill-tag">Dart Programming</span>
                     <span class="skill-tag">iOS Development</span>
                     <span class="skill-tag">Android Development</span>
-                    <span class="skill-tag">Cross-Platform</span>
+                    <span class="skill-tag">Cross-Platform Development</span>
+                    <span class="skill-tag">UI/UX Design</span>
                     <span class="skill-tag">Material Design</span>
                     <span class="skill-tag">Custom Animations</span>
                     <span class="skill-tag">Responsive Layouts</span>
+                    <span class="skill-tag">Mobile Architecture</span>
                 </div>
             </div>
             <div class="skill-category">
-                <h3><i class="fas fa-cloud"></i> Backend & Cloud</h3>
+                <h3><i class="fas fa-cloud"></i> Backend & Cloud Services</h3>
                 <div class="skills-list">
                     <span class="skill-tag">Firebase</span>
                     <span class="skill-tag">Google Cloud Platform</span>
-                    <span class="skill-tag">REST API</span>
-                    <span class="skill-tag">WebSocket</span>
                     <span class="skill-tag">Cloud Services</span>
                 </div>
             </div>
             <div class="skill-category">
-                <h3><i class="fas fa-tools"></i> Development Tools</h3>
+                <h3><i class="fas fa-tools"></i> Development Tools & Version Control</h3>
                 <div class="skills-list">
                     <span class="skill-tag">Git</span>
                     <span class="skill-tag">GitHub</span>
                     <span class="skill-tag">GitLab</span>
-                    <span class="skill-tag">Postman</span>
-                    <span class="skill-tag">Swagger</span>
-                    <span class="skill-tag">Testing</span>
-                    <span class="skill-tag">Debugging</span>
-                    <span class="skill-tag">Performance Optimization</span>
+                    <span class="skill-tag">Version Control</span>
                 </div>
             </div>
             <div class="skill-category">
                 <h3><i class="fas fa-cogs"></i> Architecture & Methodologies</h3>
                 <div class="skills-list">
-                    <span class="skill-tag">Design Patterns</span>
-                    <span class="skill-tag">SOLID Principles</span>
-                    <span class="skill-tag">Mobile Architecture</span>
                     <span class="skill-tag">Agile Methodologies</span>
                     <span class="skill-tag">Scrum</span>
                     <span class="skill-tag">Kanban</span>
-                    <span class="skill-tag">Technical Leadership</span>
+                    <span class="skill-tag">Design Patterns</span>
+                    <span class="skill-tag">SOLID Principles</span>
                     <span class="skill-tag">Problem Solving</span>
+                    <span class="skill-tag">Technical Leadership</span>
+                    <span class="skill-tag">Testing</span>
+                    <span class="skill-tag">Debugging</span>
+                    <span class="skill-tag">Performance Optimization</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="section">
         <h2 class="section-title">Featured Projects</h2>
         <div class="projects-grid">
             <div class="project-card">
                 <div class="project-header">
-                    <h3>Point Of Sale System</h3>
-                    <p class="project-type">Versatile POS Mobile Application</p>
+                    <h3>Point Of Sale Mobile Application</h3>
+                    <p class="project-type">Versatile POS System</p>
                 </div>
                 <div class="project-content">
                     <p class="project-description">
                         Created a versatile POS system for efficient sales management, payment recording, 
                         inventory tracking, and invoice generation with WhatsApp integration, compatible 
-                        across all device sizes. Features NFC payment integration for modern payment processing.
+                        across all device sizes. Features comprehensive sales tracking, real-time inventory 
+                        management, and seamless payment processing with modern NFC technology.
                     </p>
                     <div class="project-tech">
-                        <span class="tech-tag">Flutter</span>
-                        <span class="tech-tag">Dart</span>
+                        <span class="tech-tag">Dart language</span>
+                        <span class="tech-tag">Flutter Cross Platform</span>
                         <span class="tech-tag">NFC Payment</span>
-                        <span class="tech-tag">REST API</span>
+                        <span class="tech-tag">Rest API</span>
                         <span class="tech-tag">WhatsApp Integration</span>
                         <span class="tech-tag">Agile</span>
                     </div>
@@ -821,65 +881,19 @@
                     <p class="project-description">
                         Mobile Application that automates the electronic attestation for commercial chambers 
                         in KSA. This government-grade solution digitizes bureaucratic processes and serves 
-                        businesses across Saudi Arabia with secure, reliable electronic attestation services.
+                        businesses across Saudi Arabia with secure, reliable electronic attestation services. 
+                        Features advanced security protocols and seamless government API integration.
                     </p>
                     <div class="project-tech">
-                        <span class="tech-tag">Flutter</span>
-                        <span class="tech-tag">Dart</span>
-                        <span class="tech-tag">REST API</span>
+                        <span class="tech-tag">Dart language</span>
+                        <span class="tech-tag">Flutter Cross Platform</span>
+                        <span class="tech-tag">Rest API</span>
                         <span class="tech-tag">Government Integration</span>
-                        <span class="tech-tag">Cross Platform</span>
+                        <span class="tech-tag">Security Protocols</span>
                     </div>
                     <div class="project-links">
                         <a href="https://play.google.com/store/apps/details?id=com.worldofss.scapp" target="_blank" class="project-link">
                             <i class="fab fa-google-play"></i> Play Store
                         </a>
                         <a href="https://apps.apple.com/sa/app/%D8%A8%D9%88%D8%A7%D8%A8%D8%A9-%D8%A7%D9%84%D8%BA%D8%B1%D9%81/id1639993268" target="_blank" class="project-link">
-                            <i class="fab fa-app-store-ios"></i> App Store
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-header">
-                    <h3>Committees Mobile Application</h3>
-                    <p class="project-type">Corporate Management Platform</p>
-                </div>
-                <div class="project-content">
-                    <p class="project-description">
-                        Mobile Application managing committees' meetings, decisions, and attendance. 
-                        Features comprehensive meeting management, decision tracking, attendance monitoring, 
-                        and seamless coordination for corporate committees and organizations.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Flutter</span>
-                        <span class="tech-tag">Dart</span>
-                        <span class="tech-tag">Cross Platform</span>
-                        <span class="tech-tag">Meeting Management</span>
-                        <span class="tech-tag">Real-time Updates</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://play.google.com/store/apps/details?id=com.worldofss.committees_mobile" target="_blank" class="project-link">
-                            <i class="fab fa-google-play"></i> Play Store
-                        </a>
-                        <a href="https://apps.apple.com/sa/app/%D8%B1%D8%B5%D8%AF-%D8%A7%D9%84%D8%A7%D8%AC%D8%AA%D9%85%D8%A7%D8%B9%D8%A7%D8%AA/id6461162359" target="_blank" class="project-link">
-                            <i class="fab fa-app-store-ios"></i> App Store
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="section">
-        <h2 class="section-title">Professional Experience</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-date">Feb 2021 - Present</div>
-                <div class="timeline-content">
-                    <h3>Senior Flutter Developer</h3>
-                    <h4>World Of System and Software, Cairo Egypt</h4>
-                    <ul>
-                        <li>Lead development of enterprise-scale Flutter applications serving 50,000+
+                            <i class="fab fa
