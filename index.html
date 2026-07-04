@@ -76,7 +76,9 @@ nav{
   font-family:'JetBrains Mono',monospace;font-size:.7rem;font-weight:500;color:var(--green);
   background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.2);
   padding:.32rem .85rem;border-radius:50px;white-space:nowrap;
+  text-decoration:none;transition:background .2s,border-color .2s;
 }
+.nav-open:hover{background:rgba(34,197,94,.16);border-color:rgba(34,197,94,.45)}
 .ndot{width:6px;height:6px;background:var(--green);border-radius:50%;animation:blink 2s infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
 .nav-mob{display:none;background:none;border:none;color:var(--text);font-size:1.2rem;cursor:pointer;padding:.4rem .5rem}
@@ -383,7 +385,7 @@ footer p{color:var(--faint);font-size:.78rem}
     <li><a href="#skills">Stack</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <div class="nav-open"><span class="ndot"></span>Open to work</div>
+  <a href="#contact" class="nav-open"><span class="ndot"></span>Open to work · Contact me</a>
   <button class="nav-mob" id="menuBtn" aria-label="Open menu" aria-expanded="false"><i class="fas fa-bars" aria-hidden="true"></i></button>
 </nav>
 <div class="mob-menu" id="mobMenu">
@@ -706,7 +708,7 @@ footer p{color:var(--faint);font-size:.78rem}
   <div class="ct-grid">
     <div class="card ct-card rev"><div class="ct-i ci1"><i class="fas fa-envelope" aria-hidden="true"></i></div><h3>Email</h3><a href="mailto:amrdevmob@gmail.com">amrdevmob@gmail.com</a></div>
     <div class="card ct-card rev d1"><div class="ct-i ci2"><i class="fab fa-linkedin" aria-hidden="true"></i></div><h3>LinkedIn</h3><a href="https://www.linkedin.com/in/amri22/" target="_blank" rel="noopener noreferrer">linkedin.com/in/amri22</a></div>
-    <div class="card ct-card rev d2"><div class="ct-i ci3"><i class="fab fa-whatsapp" aria-hidden="true"></i></div><h3>WhatsApp</h3><a href="https://wa.me/201113651272" target="_blank" rel="noopener noreferrer">+20 111 365 1272</a></div>
+    <div class="card ct-card rev d2"><div class="ct-i ci3"><i class="fab fa-whatsapp" aria-hidden="true"></i></div><h3>WhatsApp</h3><a href="#contact" class="wa-link">Chat on WhatsApp</a></div>
     <div class="card ct-card rev d3"><div class="ct-i ci4"><i class="fab fa-github" aria-hidden="true"></i></div><h3>GitHub</h3><a href="https://github.com/AmrIbrahim22" target="_blank" rel="noopener noreferrer">AmrIbrahim22</a></div>
   </div>
 </div>
@@ -718,6 +720,7 @@ footer p{color:var(--faint);font-size:.78rem}
     <a href="https://github.com/AmrIbrahim22" target="_blank" rel="noopener noreferrer" class="ft-l" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
     <a href="https://www.linkedin.com/in/amri22/" target="_blank" rel="noopener noreferrer" class="ft-l" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
     <a href="mailto:amrdevmob@gmail.com" class="ft-l" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+    <a href="#contact" class="ft-l wa-link" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
   </div>
   <p>© 2026 Amr Ibrahim · Senior Flutter Developer · Remote worldwide — designed &amp; built by hand, like everything else here.</p>
 </footer>
@@ -761,6 +764,15 @@ if(btn&&menu){
   });
 }
 function cm(){open=false;menu.classList.remove('open');btn.setAttribute('aria-expanded','false');btn.innerHTML='<i class="fas fa-bars" aria-hidden="true"></i>';}
+
+// WHATSAPP — number is assembled at runtime so it never appears in the page source for scrapers
+(function(){
+  const n=['2','0','1','1','1','3','6','5','1','2','7','2'].join('');
+  document.querySelectorAll('.wa-link').forEach(a=>{
+    a.href='https://wa.me/'+n;
+    a.target='_blank';a.rel='noopener noreferrer';
+  });
+})();
 
 // SMOOTH SCROLL
 document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
