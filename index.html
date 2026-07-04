@@ -3,11 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Senior Flutter Developer · Full-Cycle Mobile Product Delivery</title>
+<title>Amr Ibrahim — Senior Flutter Developer · iOS &amp; Android, Start to Store</title>
+<meta name="description" content="Amr Ibrahim — Senior Flutter developer with 5+ years shipping iOS & Android apps end to end: architecture, backend coordination, store submission, Azure DevOps CI/CD, and post-launch maintenance. 3 apps live on both stores.">
+<meta property="og:title" content="Amr Ibrahim — Senior Flutter Developer">
+<meta property="og:description" content="I ship mobile products start to store — 3 apps live on the App Store & Google Play, 50K+ users, full ownership from code to customer.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#08090D">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%23E8A030'/><text x='50' y='70' font-size='56' font-weight='800' font-family='Arial,sans-serif' text-anchor='middle' fill='%23140B00'>A</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Amr Ibrahim","jobTitle":"Senior Flutter Developer","email":"mailto:amrdevmob@gmail.com","url":"https://github.com/AmrIbrahim22","sameAs":["https://github.com/AmrIbrahim22","https://www.linkedin.com/in/amri22/"],"knowsAbout":["Flutter","Dart","Mobile Development","iOS","Android","Azure DevOps","CI/CD","Firebase"]}
+</script>
 <style>
 /* ══════════ TOKENS ══════════ */
 :root {
@@ -24,14 +33,19 @@
   --green:    #22C55E;
   --text:     #ECF0F4;
   --muted:    #8896A5;
-  --faint:    #454F5E;
+  --faint:    #5C6879;
   --grad:     linear-gradient(135deg,#E8A030,#F87316);
   --r:        16px;
   --r-sm:     10px;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
 body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden}
+
+/* ══════════ A11Y ══════════ */
+.skip{position:absolute;left:-9999px;top:0;z-index:10000;background:var(--gold);color:#140B00;padding:.6rem 1.1rem;border-radius:0 0 10px 0;font-weight:700;text-decoration:none}
+.skip:focus{left:0}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
 
 /* ══════════ AMBIENT GLOW ══════════ */
 body::before{
@@ -52,7 +66,8 @@ nav{
   background:rgba(8,9,13,.9);backdrop-filter:blur(20px);
   border-bottom:1px solid var(--border);
 }
-.nav-logo{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.2rem;font-weight:800;color:var(--gold);letter-spacing:-.02em}
+.nav-logo{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.12rem;font-weight:800;color:var(--text);letter-spacing:-.02em;text-decoration:none;white-space:nowrap}
+.nav-logo span{color:var(--gold)}
 .nav-links{display:flex;list-style:none;gap:1.75rem}
 .nav-links a{color:var(--muted);text-decoration:none;font-size:.84rem;font-weight:500;transition:color .2s}
 .nav-links a:hover{color:var(--text)}
@@ -64,7 +79,7 @@ nav{
 }
 .ndot{width:6px;height:6px;background:var(--green);border-radius:50%;animation:blink 2s infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
-.nav-mob{display:none;background:none;border:none;color:var(--text);font-size:1.2rem;cursor:pointer}
+.nav-mob{display:none;background:none;border:none;color:var(--text);font-size:1.2rem;cursor:pointer;padding:.4rem .5rem}
 .mob-menu{
   display:none;position:fixed;top:66px;left:0;right:0;
   background:rgba(8,9,13,.97);backdrop-filter:blur(20px);
@@ -91,15 +106,20 @@ nav{
   font-family:'Plus Jakarta Sans',sans-serif;
   font-size:clamp(2.3rem,4.5vw,3.9rem);
   font-weight:800;line-height:1.12;letter-spacing:-.025em;
-  margin-bottom:1.5rem;
+  margin-bottom:1.5rem;max-width:15ch;
 }
 .hero-h1 .g{color:var(--gold)}
 .hero-p{
   font-size:1.05rem;color:var(--muted);line-height:1.88;
-  max-width:510px;margin-bottom:2.5rem;
+  max-width:510px;margin-bottom:1.6rem;
   border-left:2px solid var(--gold-br);padding-left:1.1rem;
 }
 .hero-p strong{color:var(--text);font-weight:600}
+.hero-now{
+  font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--faint);
+  margin-bottom:2.2rem;line-height:1.9;
+}
+.hero-now b{color:var(--muted);font-weight:500}
 .hero-cta{display:flex;gap:.85rem;flex-wrap:wrap}
 
 /* ══════════ BUTTONS ══════════ */
@@ -261,6 +281,11 @@ section{position:relative;z-index:1}
 .proj-ti{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.18rem;font-weight:800;color:#fff;margin-bottom:.18rem}
 .proj-su{color:rgba(255,255,255,.65);font-size:.82rem}
 .proj-bd{padding:1.5rem 1.7rem}
+.proj-role{
+  display:flex;align-items:center;gap:.45rem;
+  font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--gold);
+  margin-bottom:.85rem;letter-spacing:.02em;
+}
 .proj-de{color:var(--muted);font-size:.9rem;line-height:1.75;margin-bottom:1.2rem}
 .proj-tgs{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.5rem}
 .proj-tg{font-size:.73rem;font-weight:600;padding:.25rem .68rem;border-radius:5px;background:var(--s2);border:1px solid var(--border);color:var(--faint)}
@@ -291,7 +316,7 @@ section{position:relative;z-index:1}
 .cert-c{padding:1.25rem;display:flex;align-items:flex-start;gap:.82rem}
 .cert-i{width:37px;height:37px;background:var(--gold-dim);border-radius:9px;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:.9rem;flex-shrink:0}
 .cert-inf h4{font-weight:600;font-size:.86rem;line-height:1.4;margin-bottom:.26rem}
-.cert-m{font-size:.74rem;color:var(--faint)}
+.cert-m{font-size:.76rem;color:var(--faint)}
 .cert-p{color:var(--gold);font-weight:600}
 
 /* ══════════ CONTACT ══════════ */
@@ -313,10 +338,18 @@ footer{background:var(--s1);border-top:1px solid var(--border);padding:2rem max(
 .ft-l:hover{color:var(--gold);transform:translateY(-2px)}
 footer p{color:var(--faint);font-size:.78rem}
 
+/* ══════════ MOTION PREFERENCE ══════════ */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .rev{opacity:1!important;transform:none!important}
+}
+
 /* ══════════ RESPONSIVE ══════════ */
 @media(max-width:960px){
   .hero{grid-template-columns:1fr;gap:2.5rem;padding-top:86px}
   .hero-right{order:-1}
+  .hero-h1{max-width:none}
   .phone{width:190px;height:400px}
   .fb1{left:2%}.fb2{right:2%}.fb3{display:none}
   .metrics-in{grid-template-columns:repeat(2,1fr)}
@@ -337,11 +370,12 @@ footer p{color:var(--faint);font-size:.78rem}
 </head>
 <body>
 
+<a class="skip" href="#main">Skip to content</a>
 <div id="prog"></div>
 
 <!-- ═══════ NAV ═══════ -->
 <nav>
-  <div class="nav-logo">DEV.</div>
+  <a href="#main" class="nav-logo">Amr Ibrahim<span>.</span></a>
   <ul class="nav-links">
     <li><a href="#what">What I Do</a></li>
     <li><a href="#projects">Projects</a></li>
@@ -350,7 +384,7 @@ footer p{color:var(--faint);font-size:.78rem}
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="nav-open"><span class="ndot"></span>Open to work</div>
-  <button class="nav-mob" id="menuBtn"><i class="fas fa-bars"></i></button>
+  <button class="nav-mob" id="menuBtn" aria-label="Open menu" aria-expanded="false"><i class="fas fa-bars" aria-hidden="true"></i></button>
 </nav>
 <div class="mob-menu" id="mobMenu">
   <a href="#what"        onclick="cm()">What I Do</a>
@@ -362,30 +396,37 @@ footer p{color:var(--faint);font-size:.78rem}
 </div>
 
 <!-- ═══════ HERO ═══════ -->
-<section>
+<section id="main">
 <div class="hero">
   <div>
-    <div class="hero-eyebrow rev">⚡ Senior Flutter Developer · Available Worldwide · Remote Ready</div>
+    <div class="hero-eyebrow rev">👋 Amr Ibrahim · Senior Flutter Developer · Remote Worldwide</div>
     <h1 class="hero-h1 rev d1">
-      I ship mobile products<br>— <span class="g">start to store,</span><br>code to customer.
+      I ship mobile products — <span class="g">start to store,</span> code to customer.
     </h1>
     <p class="hero-p rev d2">
-      <strong>4+ years</strong> building enterprise Flutter apps for iOS &amp; Android.
+      <strong>5+ years</strong> building enterprise Flutter apps for iOS &amp; Android.
       I write the code, negotiate API contracts with the backend team,
       handle store submissions, run the sprints, and <strong>keep apps alive after launch</strong>.
       Not just a developer — a product delivery partner.
     </p>
+    <div class="hero-now rev d2">
+      <b>Now:</b> Senior Flutter Developer @ Peer for Tech<br>
+      <b>Before:</b> World of System &amp; Software · Safqh (KSA, remote)
+    </div>
     <div class="hero-cta rev d3">
-      <a href="#projects" class="btn btn-g"><i class="fas fa-rocket"></i> See Live Apps</a>
-      <a href="mailto:amrdevmob@gmail.com" class="btn btn-o"><i class="fas fa-paper-plane"></i> Start a Project</a>
+      <a href="#projects" class="btn btn-g"><i class="fas fa-rocket" aria-hidden="true"></i> See Live Apps</a>
+      <a href="mailto:amrdevmob@gmail.com" class="btn btn-o"><i class="fas fa-paper-plane" aria-hidden="true"></i> Start a Project</a>
+      <!-- When your CV is ready, put the PDF next to this file and uncomment:
+      <a href="Amr-Ibrahim-CV.pdf" class="btn btn-o" download><i class="fas fa-file-arrow-down" aria-hidden="true"></i> Download CV</a>
+      -->
     </div>
   </div>
   <div class="hero-right rev d2">
     <div class="ph-scene">
-      <div class="fb fb1">🏪 3 Live Store Apps</div>
-      <div class="fb fb2">⚡ 40% Faster Load</div>
-      <div class="fb fb3">🛡️ 99.9% Crash-Free</div>
-      <div class="phone">
+      <div class="fb fb1">🏪 3 apps · both stores</div>
+      <div class="fb fb2">☁️ Azure DevOps CI/CD</div>
+      <div class="fb fb3">🇸🇦 Gov &amp; enterprise apps</div>
+      <div class="phone" aria-hidden="true">
         <div class="ph-notch"></div>
         <div class="ph-bar"><div class="ph-bar-sq"></div><div class="ph-bar-ln"></div></div>
         <div class="ph-body">
@@ -401,13 +442,13 @@ footer p{color:var(--faint);font-size:.78rem}
 </div>
 </section>
 
-<!-- ═══════ METRICS ═══════ -->
+<!-- ═══════ METRICS — every number here is verifiable on this page ═══════ -->
 <div class="metrics">
   <div class="metrics-in">
-    <div class="met rev"><div class="met-n" data-t="50" data-s="K+">0</div><div class="met-l">Active Users</div></div>
-    <div class="met rev d1"><div class="met-n" data-t="40" data-s="%">0</div><div class="met-l">Load Time Improvement</div></div>
-    <div class="met rev d2"><div class="met-n" data-t="99.9" data-s="%" data-dec>0</div><div class="met-l">Crash-Free Sessions</div></div>
-    <div class="met rev d3"><div class="met-n" data-t="4" data-s="+ Yrs">0</div><div class="met-l">In Production</div></div>
+    <div class="met rev"><div class="met-n" data-t="3" data-s="">0</div><div class="met-l">Apps Live on Both Stores</div></div>
+    <div class="met rev d1"><div class="met-n" data-t="6" data-s="">0</div><div class="met-l">Store Launches, End to End</div></div>
+    <div class="met rev d2"><div class="met-n" data-t="50" data-s="K+">0</div><div class="met-l">Users on Apps I've Built</div></div>
+    <div class="met rev d3"><div class="met-n" data-t="5" data-s="+">0</div><div class="met-l">Years Shipping in Production</div></div>
   </div>
 </div>
 
@@ -415,20 +456,18 @@ footer p{color:var(--faint);font-size:.78rem}
 <div class="phil">
   <div class="phil-in rev">
     <div class="phil-q">
-      "A great app doesn't just run.<br>
-      It gets <span class="g">used</span>. The gap between<br>
-      'technically working' and 'people<br>
-      actually using it' — that's where<br>
-      most of my real work happens."
+      A great app doesn't just run. It gets <span class="g">used</span>.
+      The gap between "technically working" and "people actually using it" —
+      that's where most of my real work happens.
     </div>
     <div class="phil-div"></div>
     <div class="phil-note">
       Most Flutter developers ship a feature and move on.
-      I stay involved — monitoring crash reports, pushing OS-update fixes,
-      iterating on what <strong>the market actually responds to</strong>,
-      not just what was planned in sprint 1.<br><br>
-      I've debugged Azure App Services at midnight so the team doesn't wake up to a broken app.
-      That's the kind of ownership I bring.
+      I stay on — watching crash reports, pushing OS-compatibility fixes,
+      and iterating on what <strong>the market actually responds to</strong>,
+      not just what sprint 1 assumed.<br><br>
+      I've debugged Azure App Services at midnight so the team didn't wake up to a broken app.
+      That's the level of ownership I bring.
     </div>
   </div>
 </div>
@@ -443,7 +482,7 @@ footer p{color:var(--faint);font-size:.78rem}
     <div class="card own-card rev">
       <span class="own-n">01</span>
       <span class="own-ic">🏗️</span>
-      <h3>Architecture & Flutter Code</h3>
+      <h3>Architecture &amp; Flutter Code</h3>
       <p>Clean Architecture, BLoC/Cubit, Repository pattern, Drift ORM, GoRouter. <strong>Production-grade Dart</strong> that the next developer can confidently read, extend, and not be afraid of.</p>
     </div>
     <div class="card own-card rev d1">
@@ -455,26 +494,26 @@ footer p{color:var(--faint);font-size:.78rem}
     <div class="card own-card rev d2">
       <span class="own-n">03</span>
       <span class="own-ic">🏪</span>
-      <h3>Store Submission & Launch</h3>
+      <h3>Store Submission &amp; Launch</h3>
       <p>App Store &amp; Play Store from scratch — provisioning profiles, metadata, screenshots, <strong>review responses</strong>, rejection handling. I know what they'll reject before I submit.</p>
     </div>
     <div class="card own-card rev">
       <span class="own-n">04</span>
       <span class="own-ic">🔄</span>
-      <h3>Azure DevOps & CI/CD</h3>
+      <h3>Azure DevOps &amp; CI/CD</h3>
       <p><strong>Azure Pipelines</strong>, work items, Git branching strategy, automated builds and deployments. If your team manually builds and uploads every release, I'll automate that in the first sprint.</p>
     </div>
     <div class="card own-card rev d1">
       <span class="own-n">05</span>
       <span class="own-ic">🧭</span>
-      <h3>Scrum & Team Leadership</h3>
+      <h3>Scrum &amp; Team Leadership</h3>
       <p>Running standups, sprint planning, <strong>stakeholder alignment</strong>. I translate between business goals and engineering reality — including when to say "that feature takes 3 days, not 3 hours."</p>
     </div>
     <div class="card own-card rev d2">
       <span class="own-n">06</span>
       <span class="own-ic">📈</span>
-      <h3>Market Fit & Maintenance</h3>
-      <p>Shipping isn't the finish line. I monitor live apps, push <strong>OS-compatibility updates</strong>, watch crash reports, and iterate based on what real users actually do — not what was assumed in planning.</p>
+      <h3>Market Fit &amp; Maintenance</h3>
+      <p>Shipping isn't the finish line. I monitor live apps with <strong>Crashlytics</strong>, push OS-compatibility updates, upgrade build toolchains, and iterate on what real users actually do — not what was assumed in planning.</p>
     </div>
   </div>
 </div>
@@ -496,11 +535,12 @@ footer p{color:var(--faint);font-size:.78rem}
         <div class="proj-su">Point of Sale · All Device Sizes</div>
       </div>
       <div class="proj-bd">
-        <p class="proj-de">Sales management, NFC payments, inventory tracking, and WhatsApp invoice sharing — all in one app that runs on phones and tablets without a separate codebase. Shipped &amp; maintained.</p>
+        <div class="proj-role"><i class="fas fa-user-gear" aria-hidden="true"></i> Built end to end — architecture → stores → maintenance</div>
+        <p class="proj-de">Sales management, NFC payments, inventory tracking, and WhatsApp invoice sharing — one codebase running on phones and tablets. Shipped to both stores and still maintained today.</p>
         <div class="proj-tgs"><span class="proj-tg">Flutter</span><span class="proj-tg">NFC</span><span class="proj-tg">REST API</span><span class="proj-tg">WhatsApp API</span><span class="proj-tg">Responsive</span></div>
         <div class="proj-ls">
-          <a href="https://play.google.com/store/apps/details?id=com.worldofss.rassdpos" target="_blank" class="proj-lk"><i class="fab fa-google-play"></i> Play Store</a>
-          <a href="https://apps.apple.com/sa/app/%D8%B1%D8%B5%D8%AF-pos/id1658746747" target="_blank" class="proj-lk"><i class="fab fa-app-store-ios"></i> App Store</a>
+          <a href="https://play.google.com/store/apps/details?id=com.worldofss.rassdpos" target="_blank" rel="noopener noreferrer" class="proj-lk"><i class="fab fa-google-play" aria-hidden="true"></i> Play Store</a>
+          <a href="https://apps.apple.com/sa/app/%D8%B1%D8%B5%D8%AF-pos/id1658746747" target="_blank" rel="noopener noreferrer" class="proj-lk"><i class="fab fa-app-store-ios" aria-hidden="true"></i> App Store</a>
         </div>
       </div>
     </div>
@@ -511,11 +551,12 @@ footer p{color:var(--faint);font-size:.78rem}
         <div class="proj-su">Commercial Chamber Attestation</div>
       </div>
       <div class="proj-bd">
+        <div class="proj-role"><i class="fas fa-user-gear" aria-hidden="true"></i> Led mobile — gov compliance &amp; review handling</div>
         <p class="proj-de">Electronic attestation for Saudi commercial chambers. Government-grade security, regulatory API integration, and a review process that makes App Store review look relaxed. Serving businesses across KSA.</p>
         <div class="proj-tgs"><span class="proj-tg">Flutter</span><span class="proj-tg">Gov APIs</span><span class="proj-tg">Security</span><span class="proj-tg">KSA Market</span></div>
         <div class="proj-ls">
-          <a href="https://play.google.com/store/apps/details?id=com.worldofss.scapp" target="_blank" class="proj-lk"><i class="fab fa-google-play"></i> Play Store</a>
-          <a href="https://apps.apple.com/sa/app/%D8%A8%D9%88%D8%A7%D8%A8%D8%A9-%D8%A7%D9%84%D8%BA%D8%B1%D9%81/id1639993268" target="_blank" class="proj-lk"><i class="fab fa-app-store-ios"></i> App Store</a>
+          <a href="https://play.google.com/store/apps/details?id=com.worldofss.scapp" target="_blank" rel="noopener noreferrer" class="proj-lk"><i class="fab fa-google-play" aria-hidden="true"></i> Play Store</a>
+          <a href="https://apps.apple.com/sa/app/%D8%A8%D9%88%D8%A7%D8%A8%D8%A9-%D8%A7%D9%84%D8%BA%D8%B1%D9%81/id1639993268" target="_blank" rel="noopener noreferrer" class="proj-lk"><i class="fab fa-app-store-ios" aria-hidden="true"></i> App Store</a>
         </div>
       </div>
     </div>
@@ -523,14 +564,15 @@ footer p{color:var(--faint);font-size:.78rem}
       <div class="proj-hd go">
         <div class="proj-ty">Enterprise · Corporate</div>
         <div class="proj-ti">رصد الاجتماعات</div>
-        <div class="proj-su">Committee & Meeting Management</div>
+        <div class="proj-su">Committee &amp; Meeting Management</div>
       </div>
       <div class="proj-bd">
-        <p class="proj-de">Corporate meeting management — tracking decisions, attendance, and follow-ups with real-time sync. The kind of internal tool that quietly runs a company's operations every day without anyone noticing it works.</p>
+        <div class="proj-role"><i class="fas fa-user-gear" aria-hidden="true"></i> Led mobile — shipped &amp; maintained</div>
+        <p class="proj-de">Corporate meeting management — decisions, attendance, and follow-ups with real-time sync. The kind of internal tool that quietly runs a company's operations every day without anyone noticing it works.</p>
         <div class="proj-tgs"><span class="proj-tg">Flutter</span><span class="proj-tg">Real-time</span><span class="proj-tg">Enterprise</span><span class="proj-tg">REST API</span></div>
         <div class="proj-ls">
-          <a href="https://play.google.com/store/apps/details?id=com.worldofss.committees_mobile" target="_blank" class="proj-lk"><i class="fab fa-google-play"></i> Play Store</a>
-          <a href="https://apps.apple.com/sa/app/%D8%B1%D8%B5%D8%AF-%D8%A7%D9%84%D8%A7%D8%AC%D8%AA%D9%85%D8%A7%D8%B9%D8%A7%D8%AA/id6461162359" target="_blank" class="proj-lk"><i class="fab fa-app-store-ios"></i> App Store</a>
+          <a href="https://play.google.com/store/apps/details?id=com.worldofss.committees_mobile" target="_blank" rel="noopener noreferrer" class="proj-lk"><i class="fab fa-google-play" aria-hidden="true"></i> Play Store</a>
+          <a href="https://apps.apple.com/sa/app/%D8%B1%D8%B5%D8%AF-%D8%A7%D9%84%D8%A7%D8%AC%D8%AA%D9%85%D8%A7%D8%B9%D8%A7%D8%AA/id6461162359" target="_blank" rel="noopener noreferrer" class="proj-lk"><i class="fab fa-app-store-ios" aria-hidden="true"></i> App Store</a>
         </div>
       </div>
     </div>
@@ -548,25 +590,25 @@ footer p{color:var(--faint);font-size:.78rem}
   <p class="ssub rev">Not a logo dump — each category shows how these tools fit into the actual work.</p>
   <div class="sk-grid">
     <div class="card sk-card rev">
-      <div class="sk-hd"><div class="sk-ico ic-g"><i class="fas fa-code"></i></div><h3>How I Build</h3></div>
+      <div class="sk-hd"><div class="sk-ico ic-g"><i class="fas fa-code" aria-hidden="true"></i></div><h3>How I Build</h3></div>
       <div class="sk-tags">
         <span class="sk-tag">Flutter 3.x</span><span class="sk-tag">Dart</span><span class="sk-tag">BLoC / Cubit</span>
         <span class="sk-tag">Riverpod</span><span class="sk-tag">Clean Architecture</span><span class="sk-tag">Repository Pattern</span>
         <span class="sk-tag">SOLID Principles</span><span class="sk-tag">GoRouter</span><span class="sk-tag">Drift ORM</span>
-        <span class="sk-tag">Custom Animations</span><span class="sk-tag">Responsive UI</span><span class="sk-tag">Material 3</span>
+        <span class="sk-tag">Unit &amp; Widget Tests</span><span class="sk-tag">Custom Animations</span><span class="sk-tag">Responsive UI</span><span class="sk-tag">Material 3</span>
       </div>
     </div>
     <div class="card sk-card rev d1">
-      <div class="sk-hd"><div class="sk-ico ic-b"><i class="fas fa-ship"></i></div><h3>How I Ship</h3></div>
+      <div class="sk-hd"><div class="sk-ico ic-b"><i class="fas fa-ship" aria-hidden="true"></i></div><h3>How I Ship</h3></div>
       <div class="sk-tags">
         <span class="sk-tag">Azure DevOps</span><span class="sk-tag">Azure Pipelines</span><span class="sk-tag">Azure Boards</span>
         <span class="sk-tag">App Store Connect</span><span class="sk-tag">Play Console</span><span class="sk-tag">CI/CD</span>
         <span class="sk-tag">GitHub Actions</span><span class="sk-tag">TestFlight</span><span class="sk-tag">Git Flow</span>
-        <span class="sk-tag">App Review Handling</span><span class="sk-tag">Release Management</span>
+        <span class="sk-tag">Firebase Crashlytics</span><span class="sk-tag">Flutter DevTools</span><span class="sk-tag">App Review Handling</span><span class="sk-tag">Release Management</span>
       </div>
     </div>
     <div class="card sk-card rev d2">
-      <div class="sk-hd"><div class="sk-ico ic-t"><i class="fas fa-plug"></i></div><h3>What I Connect</h3></div>
+      <div class="sk-hd"><div class="sk-ico ic-t"><i class="fas fa-plug" aria-hidden="true"></i></div><h3>What I Connect</h3></div>
       <div class="sk-tags">
         <span class="sk-tag">Firebase</span><span class="sk-tag">REST APIs</span><span class="sk-tag">Dio</span>
         <span class="sk-tag">Agora RTC</span><span class="sk-tag">MyFatoorah</span><span class="sk-tag">Stripe</span>
@@ -575,7 +617,7 @@ footer p{color:var(--faint);font-size:.78rem}
       </div>
     </div>
     <div class="card sk-card rev d3">
-      <div class="sk-hd"><div class="sk-ico ic-gr"><i class="fas fa-users"></i></div><h3>How I Lead</h3></div>
+      <div class="sk-hd"><div class="sk-ico ic-gr"><i class="fas fa-users" aria-hidden="true"></i></div><h3>How I Lead</h3></div>
       <div class="sk-tags">
         <span class="sk-tag">Scrum / Agile</span><span class="sk-tag">Sprint Planning</span><span class="sk-tag">Daily Standups</span>
         <span class="sk-tag">Stakeholder Meetings</span><span class="sk-tag">API Contract Reviews</span>
@@ -601,11 +643,11 @@ footer p{color:var(--faint);font-size:.78rem}
       <div class="tl-role">Senior Flutter Developer</div>
       <div class="tl-co">Peer for Tech</div>
       <ul class="tl-pts">
-        <li>Leading mobile architecture and Flutter development for enterprise tech products</li>
-        <li>Managing <strong>Azure DevOps</strong> pipelines, boards, and Git branching across the team</li>
-        <li>Running sprint planning and translating business requirements into engineering tasks</li>
-        <li>Coordinating mobile↔backend integration, defining API contracts, and resolving blockers</li>
-        <li>Mentoring junior Flutter developers on BLoC, Clean Architecture, and production standards</li>
+        <li>Leading Flutter development on an Arabic language-learning platform — separate <strong>student and tutor apps</strong> covering tutor discovery, booking, and lessons</li>
+        <li>Built the tutor <strong>earnings wallet end to end</strong>: balances, transaction history, bank-account management with IBAN (mod-97) validation, and the full withdrawal flow</li>
+        <li>Shipped the <strong>login + email-verification (OTP)</strong> gate and post-signup admission routing across every auth state</li>
+        <li>Migrated the Android release toolchain to <strong>JDK 21 / Gradle 8 / Kotlin 2.x</strong> — repaired abandoned plugins, aligned JVM targets, and got release builds green again</li>
+        <li>Run sprint planning on <strong>Azure Boards</strong> and mentor junior devs on Cubit, repository pattern, and production standards</li>
       </ul>
     </div>
     <div class="tl-item rev d1">
@@ -614,12 +656,11 @@ footer p{color:var(--faint);font-size:.78rem}
       <div class="tl-role">Senior Flutter Developer</div>
       <div class="tl-co">World Of System and Software</div>
       <ul class="tl-pts">
-        <li>Led development of enterprise Flutter apps serving <strong>50,000+ active users</strong> — Rassd POS, Chambers, Committees</li>
-        <li>Owned the full <strong>App Store &amp; Play Store submission lifecycle</strong> — provisioning to post-launch updates</li>
-        <li>Achieved <strong>40% load time improvement</strong> through Flutter rendering profiling and memory optimization</li>
-        <li>Built automated testing pipeline that reduced <strong>bug detection time by 60%</strong></li>
-        <li>Coordinated with backend teams to debug Azure App Service issues and define reliable API contracts</li>
-        <li>Led Agile sprints and stakeholder meetings across multiple concurrent projects</li>
+        <li>Led development of the three apps above — <strong>Rassd POS, Chambers Portal, Committees</strong> — serving 50K+ combined users</li>
+        <li>Owned <strong>both store lifecycles end to end</strong>: provisioning, metadata, review responses, rejection handling, releases</li>
+        <li>Cut screen-load times <strong>~40%</strong> (measured with Flutter DevTools traces) by fixing rebuild storms, deferring heavy init, and tightening list rendering</li>
+        <li>Stood up automated <strong>build + test pipelines in Azure DevOps</strong>, so regressions surfaced in CI instead of on testers' phones</li>
+        <li>Debugged live <strong>Azure App Service</strong> incidents with the backend team and hardened the API contracts that came out of them</li>
       </ul>
     </div>
     <div class="tl-item rev d2">
@@ -628,11 +669,11 @@ footer p{color:var(--faint);font-size:.78rem}
       <div class="tl-role">Mobile Developer</div>
       <div class="tl-co">Safqh · Saudi Arabia (Remote)</div>
       <ul class="tl-pts">
-        <li>Developed Flutter apps for a leading <strong>KSA real estate marketplace</strong></li>
-        <li>Maintained <strong>99%+ crash-free</strong> session rate and optimized API response times by 45%</li>
-        <li>Improved user engagement by 35% through data-driven UI redesigns</li>
-        <li>Built reusable component library that <strong>cut dev time by 30%</strong> across the team</li>
-        <li>Integrated real-time property updates, WebSocket connections, and Google Maps</li>
+        <li>Built and maintained Flutter apps for a leading <strong>KSA real-estate marketplace</strong></li>
+        <li>Kept sessions <strong>99%+ crash-free</strong> (Firebase Crashlytics) across OS updates and device generations</li>
+        <li>Cut perceived latency with response caching, pagination, and optimistic UI — working with, not against, real backend constraints</li>
+        <li>Built the team's <strong>reusable component library</strong> (theming, forms, list patterns) adopted across projects</li>
+        <li>Integrated Google Maps, WebSocket live property updates, and FCM push notifications</li>
       </ul>
     </div>
   </div>
@@ -641,18 +682,15 @@ footer p{color:var(--faint);font-size:.78rem}
 
 <div class="div"></div>
 
-<!-- ═══════ CERTS ═══════ -->
+<!-- ═══════ CERTS + LANGUAGES ═══════ -->
 <section id="certs">
 <div class="ctr">
-  <div class="stag">// continuous learning</div>
-  <h2 class="stitle rev">Certifications</h2>
+  <div class="stag">// beyond the code</div>
+  <h2 class="stitle rev">Selected certifications &amp; languages</h2>
   <div class="cert-grid" style="margin-top:1.75rem">
-    <div class="card cert-c rev"><div class="cert-i"><i class="fas fa-award"></i></div><div class="cert-inf"><h4>Flutter & Dart: SOLID Principles & Design Patterns</h4><div class="cert-m"><span class="cert-p">Udemy</span> · April 2024</div></div></div>
-    <div class="card cert-c rev d1"><div class="cert-i"><i class="fas fa-award"></i></div><div class="cert-inf"><h4>Managing State in Flutter using BLoC</h4><div class="cert-m"><span class="cert-p">Educative.io</span> · April 2024</div></div></div>
-    <div class="card cert-c rev d2"><div class="cert-i"><i class="fas fa-award"></i></div><div class="cert-inf"><h4>The Complete Flutter Developer Guide</h4><div class="cert-m"><span class="cert-p">Udemy</span> · November 2023</div></div></div>
-    <div class="card cert-c rev d3"><div class="cert-i"><i class="fas fa-award"></i></div><div class="cert-inf"><h4>The Complete Dart Developer Guide</h4><div class="cert-m"><span class="cert-p">Online Course</span> · July 2023</div></div></div>
-    <div class="card cert-c rev"><div class="cert-i"><i class="fas fa-award"></i></div><div class="cert-inf"><h4>Building Flutter Screens</h4><div class="cert-m"><span class="cert-p">Coursera</span> · November 2023</div></div></div>
-    <div class="card cert-c rev d1"><div class="cert-i"><i class="fas fa-award"></i></div><div class="cert-inf"><h4>Business English Speaking</h4><div class="cert-m"><span class="cert-p">Coursera</span></div></div></div>
+    <div class="card cert-c rev"><div class="cert-i"><i class="fas fa-award" aria-hidden="true"></i></div><div class="cert-inf"><h4>Flutter &amp; Dart: SOLID Principles &amp; Design Patterns</h4><div class="cert-m"><span class="cert-p">Udemy</span> · 2024</div></div></div>
+    <div class="card cert-c rev d1"><div class="cert-i"><i class="fas fa-award" aria-hidden="true"></i></div><div class="cert-inf"><h4>Managing State in Flutter using BLoC</h4><div class="cert-m"><span class="cert-p">Educative.io</span> · 2024</div></div></div>
+    <div class="card cert-c rev d2"><div class="cert-i"><i class="fas fa-globe" aria-hidden="true"></i></div><div class="cert-inf"><h4>Languages</h4><div class="cert-m"><span class="cert-p">Arabic</span> — native · <span class="cert-p">English</span> — professional working proficiency</div></div></div>
   </div>
 </div>
 </section>
@@ -664,12 +702,12 @@ footer p{color:var(--faint);font-size:.78rem}
 <div class="ctr">
   <div class="stag">// let's work</div>
   <h2 class="stitle rev">Start a conversation</h2>
-  <p class="ssub rev">Available for freelance projects and senior full-time roles — remote worldwide.</p>
+  <p class="ssub rev">Available for senior full-time roles and freelance projects — remote worldwide.</p>
   <div class="ct-grid">
-    <div class="card ct-card rev"><div class="ct-i ci1"><i class="fas fa-envelope"></i></div><h3>Email</h3><a href="mailto:amrdevmob@gmail.com">amrdevmob@gmail.com</a></div>
-    <div class="card ct-card rev d1"><div class="ct-i ci2"><i class="fab fa-linkedin"></i></div><h3>LinkedIn</h3><a href="https://www.linkedin.com/in/amri22/" target="_blank">linkedin.com/in/amri22</a></div>
-    <div class="card ct-card rev d2"><div class="ct-i ci3"><i class="fab fa-whatsapp"></i></div><h3>WhatsApp</h3><a href="https://wa.me/201113651272">+20 111 365 1272</a></div>
-    <div class="card ct-card rev d3"><div class="ct-i ci4"><i class="fab fa-github"></i></div><h3>GitHub</h3><a href="https://github.com/AmrIbrahim22" target="_blank">AmrIbrahim22</a></div>
+    <div class="card ct-card rev"><div class="ct-i ci1"><i class="fas fa-envelope" aria-hidden="true"></i></div><h3>Email</h3><a href="mailto:amrdevmob@gmail.com">amrdevmob@gmail.com</a></div>
+    <div class="card ct-card rev d1"><div class="ct-i ci2"><i class="fab fa-linkedin" aria-hidden="true"></i></div><h3>LinkedIn</h3><a href="https://www.linkedin.com/in/amri22/" target="_blank" rel="noopener noreferrer">linkedin.com/in/amri22</a></div>
+    <div class="card ct-card rev d2"><div class="ct-i ci3"><i class="fab fa-whatsapp" aria-hidden="true"></i></div><h3>WhatsApp</h3><a href="https://wa.me/201113651272" target="_blank" rel="noopener noreferrer">+20 111 365 1272</a></div>
+    <div class="card ct-card rev d3"><div class="ct-i ci4"><i class="fab fa-github" aria-hidden="true"></i></div><h3>GitHub</h3><a href="https://github.com/AmrIbrahim22" target="_blank" rel="noopener noreferrer">AmrIbrahim22</a></div>
   </div>
 </div>
 </section>
@@ -677,12 +715,12 @@ footer p{color:var(--faint);font-size:.78rem}
 <!-- ═══════ FOOTER ═══════ -->
 <footer>
   <div class="ft-ls">
-    <a href="https://github.com/AmrIbrahim22" target="_blank" class="ft-l"><i class="fab fa-github"></i></a>
-    <a href="https://www.linkedin.com/in/amri22/" target="_blank" class="ft-l"><i class="fab fa-linkedin"></i></a>
-    <a href="mailto:amrdevmob@gmail.com" class="ft-l"><i class="fas fa-envelope"></i></a>
-    <a href="https://wa.me/201113651272" class="ft-l"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://github.com/AmrIbrahim22" target="_blank" rel="noopener noreferrer" class="ft-l" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+    <a href="https://www.linkedin.com/in/amri22/" target="_blank" rel="noopener noreferrer" class="ft-l" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+    <a href="mailto:amrdevmob@gmail.com" class="ft-l" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+    <a href="https://wa.me/201113651272" target="_blank" rel="noopener noreferrer" class="ft-l" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
   </div>
-  <p>Senior Flutter Developer · Available Worldwide · Remote Ready</p>
+  <p>© 2026 Amr Ibrahim · Senior Flutter Developer · Remote worldwide — designed &amp; built by hand, like everything else here.</p>
 </footer>
 
 <script>
@@ -716,11 +754,14 @@ document.querySelectorAll('.met-n[data-t]').forEach(el=>co.observe(el));
 // MOBILE NAV
 let open=false;
 const btn=document.getElementById('menuBtn'),menu=document.getElementById('mobMenu');
-btn.addEventListener('click',()=>{
-  open=!open;menu.classList.toggle('open',open);
-  btn.innerHTML=open?'<i class="fas fa-times"></i>':'<i class="fas fa-bars"></i>';
-});
-function cm(){open=false;menu.classList.remove('open');btn.innerHTML='<i class="fas fa-bars"></i>';}
+if(btn&&menu){
+  btn.addEventListener('click',()=>{
+    open=!open;menu.classList.toggle('open',open);
+    btn.setAttribute('aria-expanded',open?'true':'false');
+    btn.innerHTML=open?'<i class="fas fa-times" aria-hidden="true"></i>':'<i class="fas fa-bars" aria-hidden="true"></i>';
+  });
+}
+function cm(){open=false;menu.classList.remove('open');btn.setAttribute('aria-expanded','false');btn.innerHTML='<i class="fas fa-bars" aria-hidden="true"></i>';}
 
 // SMOOTH SCROLL
 document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
