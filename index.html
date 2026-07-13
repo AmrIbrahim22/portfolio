@@ -15,7 +15,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Amr Ibrahim","jobTitle":"Senior Flutter Developer","email":"mailto:amrdevmob@gmail.com","url":"https://github.com/AmrIbrahim22","sameAs":["https://github.com/AmrIbrahim22","https://www.linkedin.com/in/amri22/"],"knowsAbout":["Flutter","Dart","Mobile Development","iOS","Android","Azure DevOps","CI/CD","Firebase"]}
+{"@context":"https://schema.org","@type":"Person","name":"Amr Ibrahim","jobTitle":"Senior Flutter Developer","url":"https://github.com/AmrIbrahim22","sameAs":["https://github.com/AmrIbrahim22","https://www.linkedin.com/in/amri22/"],"knowsAbout":["Flutter","Dart","Mobile Development","iOS","Android","Azure DevOps","CI/CD","Firebase"]}
 </script>
 <style>
 /* ══════════ TOKENS ══════════ */
@@ -417,7 +417,7 @@ footer p{color:var(--faint);font-size:.78rem}
     </div>
     <div class="hero-cta rev d3">
       <a href="#projects" class="btn btn-g"><i class="fas fa-rocket" aria-hidden="true"></i> See Live Apps</a>
-      <a href="mailto:amrdevmob@gmail.com" class="btn btn-o"><i class="fas fa-paper-plane" aria-hidden="true"></i> Start a Project</a>
+      <a href="#contact" class="btn btn-o em-link"><i class="fas fa-paper-plane" aria-hidden="true"></i> Start a Project</a>
       <!-- When your CV is ready, put the PDF next to this file and uncomment:
       <a href="Amr-Ibrahim-CV.pdf" class="btn btn-o" download><i class="fas fa-file-arrow-down" aria-hidden="true"></i> Download CV</a>
       -->
@@ -706,7 +706,7 @@ footer p{color:var(--faint);font-size:.78rem}
   <h2 class="stitle rev">Start a conversation</h2>
   <p class="ssub rev">Available for senior full-time roles and freelance projects — remote worldwide.</p>
   <div class="ct-grid">
-    <div class="card ct-card rev"><div class="ct-i ci1"><i class="fas fa-envelope" aria-hidden="true"></i></div><h3>Email</h3><a href="mailto:amrdevmob@gmail.com">amrdevmob@gmail.com</a></div>
+    <div class="card ct-card rev"><div class="ct-i ci1"><i class="fas fa-envelope" aria-hidden="true"></i></div><h3>Email</h3><a href="#contact" class="em-link" data-show="1">click to reveal</a></div>
     <div class="card ct-card rev d1"><div class="ct-i ci2"><i class="fab fa-linkedin" aria-hidden="true"></i></div><h3>LinkedIn</h3><a href="https://www.linkedin.com/in/amri22/" target="_blank" rel="noopener noreferrer">linkedin.com/in/amri22</a></div>
     <div class="card ct-card rev d2"><div class="ct-i ci3"><i class="fab fa-whatsapp" aria-hidden="true"></i></div><h3>WhatsApp</h3><a href="#contact" class="wa-link">Chat on WhatsApp</a></div>
     <div class="card ct-card rev d3"><div class="ct-i ci4"><i class="fab fa-github" aria-hidden="true"></i></div><h3>GitHub</h3><a href="https://github.com/AmrIbrahim22" target="_blank" rel="noopener noreferrer">AmrIbrahim22</a></div>
@@ -719,7 +719,7 @@ footer p{color:var(--faint);font-size:.78rem}
   <div class="ft-ls">
     <a href="https://github.com/AmrIbrahim22" target="_blank" rel="noopener noreferrer" class="ft-l" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
     <a href="https://www.linkedin.com/in/amri22/" target="_blank" rel="noopener noreferrer" class="ft-l" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-    <a href="mailto:amrdevmob@gmail.com" class="ft-l" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+    <a href="#contact" class="ft-l em-link" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
     <a href="#contact" class="ft-l wa-link" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
   </div>
   <p>© 2026 Amr Ibrahim · Senior Flutter Developer · Remote worldwide — designed &amp; built by hand, like everything else here.</p>
@@ -771,6 +771,15 @@ function cm(){open=false;menu.classList.remove('open');btn.setAttribute('aria-ex
   document.querySelectorAll('.wa-link').forEach(a=>{
     a.href='https://wa.me/'+n;
     a.target='_blank';a.rel='noopener noreferrer';
+  });
+})();
+
+// EMAIL — assembled at runtime the same way, invisible to harvesters
+(function(){
+  const m=['a','m','r','d','e','v','m','o','b'].join('')+String.fromCharCode(64)+'gmail.com';
+  document.querySelectorAll('.em-link').forEach(a=>{
+    a.href='mailto:'+m;
+    if(a.dataset.show)a.textContent=m;
   });
 })();
 
